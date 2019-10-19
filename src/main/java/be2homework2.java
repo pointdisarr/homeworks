@@ -5,7 +5,7 @@ public class be2homework2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[][] area = {{"0", "1", "2", "3", "4", "5"}, // is it 5d array or 2d array
+        String[][] area = {{"0", "1", "2", "3", "4", "5"}, 
                 {"1", "-", "-", "-", "-", "-"},
                 {"2", "-", "-", "-", "-", "-"},
                 {"3", "-", "-", "-", "-", "-"},
