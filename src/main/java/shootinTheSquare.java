@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class be2homework2 {
+public class shootinTheSquare {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -16,8 +16,8 @@ public class be2homework2 {
         System.out.println("You have 3 bullets");
 
         System.out.println(Arrays.deepToString(area).replace("], ", "] \n"));
-        int enteredLine ;
-        int shootingBar ;
+        int enteredLine;
+        int shootingBar;
         int shots = 0;
         int bombShots = 0;
 
@@ -44,20 +44,20 @@ public class be2homework2 {
         }
         while (shots < 3);
 
-        do{
+        do {
             System.out.println("You found 1 bomb. Enter the area you want to BOMB: ");
-        while (!sc.hasNextInt()) {
-            sc.next();
-            System.out.println("What? Just focus on the line you want to BOMB");
-        }
-        int enteredBomb = sc.nextInt();
+            while (!sc.hasNextInt()) {
+                sc.next();
+                System.out.println("What? Just focus on the line you want to BOMB");
+            }
+            int enteredBomb = sc.nextInt();
             if (enteredBomb < 0 || enteredBomb > 5) {
                 System.out.println("Are you sure you gonna throw there? You are going to lose your only bomb");
                 sc.next();
             } else {
-                area[enteredBomb][enteredBomb-2] = "X";
+                area[enteredBomb][enteredBomb - 2] = "X";
                 area[enteredBomb][enteredBomb] = "X";
-                area[enteredBomb][enteredBomb-1] = "X";
+                area[enteredBomb][enteredBomb - 1] = "X";
                 bombShots++;
                 System.out.println(Arrays.deepToString(area).replace("], ", "]\n"));
             }

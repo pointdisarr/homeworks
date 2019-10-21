@@ -3,15 +3,19 @@ import java.util.Random;
 import java.util.Scanner;
 
 //TASK: NUMBERS
-public class be2homework1 {
+public class numbersTask {
 
     public static void main(String[] args) {
+
+        Random rnd = new Random();
+
         int givenNumber;
-        // Advance mode
-//        String[][] advModeArray ={{"Guess my birthyear",
-//                "When is the last time I had a girlfriend",
-//                "When is the first macbook released" },
-//                {"1997", "2009", "2006"}};
+        int advModeQuestion = rnd.nextInt(3);
+
+        String[][] advModeArray ={{"Guess my birthyear",
+               "When is the last time I had a girlfriend",
+              "When is the first macbook released" },
+               {"1997", "2009", "2006"}};
 
 
         int[] guessedNumbers = new int[9];
@@ -24,6 +28,12 @@ public class be2homework1 {
 
         System.out.println("Hi " + name + ", Let the game begin! You have 10 moves! ");
         System.out.println(name + ", what do you think is the number [1-100]?");
+
+
+
+
+
+
 
 
         do {
@@ -39,9 +49,8 @@ public class be2homework1 {
 
 
 
-        Random rnd = new Random();
+
         int hiddenNumber = rnd.nextInt(100);
-//        int advModeQuestion = rnd.nextInt(3); -- Choosing random cell from multidimensional array
         int steps = 1;
 
         int i = 0;
@@ -75,13 +84,31 @@ public class be2homework1 {
         System.out.println("And theese are guessed numbers " + Arrays.toString(guessedNumbers));
         System.out.println();
 
-        System.out.println("-- You have proceed to the Advanced Mode -- But it's under construction, Come back soon! ");
+
         System.out.println();
 
-//        System.out.println(Arrays.deepToString(advModeArray[0]));
+        System.out.println("YOU HAVE PROCEED TO THE ADVANCED MODE -- ");
+        System.out.println(advModeArray[0][advModeQuestion]);
+        System.out.println();
 
+
+        String tempLine = sc.next();
+
+
+                while(sc.hasNextLine()) {
+
+                    if (tempLine.equals(advModeArray[1][advModeQuestion].toString())) {
+                        System.out.println("CONGRATS, MADMAN!");
+                        break;
+                    } else {
+                        System.out.println("Try Again!");
+                        tempLine = sc.next();
+                    }
+
+                }}
     }
-}
+
+
 
 
 
