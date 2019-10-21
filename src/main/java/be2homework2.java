@@ -5,7 +5,7 @@ public class be2homework2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[][] area = {{"0", "1", "2", "3", "4", "5"}, // is it 5d array or 2d array
+        String[][] area = {{"0", "1", "2", "3", "4", "5"},
                 {"1", "-", "-", "-", "-", "-"},
                 {"2", "-", "-", "-", "-", "-"},
                 {"3", "-", "-", "-", "-", "-"},
@@ -15,7 +15,7 @@ public class be2homework2 {
 
         System.out.println("You have 3 bullets");
 
-        System.out.println(Arrays.deepToString(area));
+        System.out.println(Arrays.deepToString(area).replace("], ", "] \n"));
         int enteredLine ;
         int shootingBar ;
         int shots = 0;
@@ -39,7 +39,7 @@ public class be2homework2 {
             } else {
                 area[enteredLine][shootingBar] = "*";
                 shots++;
-                System.out.println(Arrays.deepToString(area));
+                System.out.println(Arrays.deepToString(area).replace("], ", "]\n"));
             }
         }
         while (shots < 3);
@@ -59,7 +59,7 @@ public class be2homework2 {
                 area[enteredBomb][enteredBomb] = "X";
                 area[enteredBomb][enteredBomb-1] = "X";
                 bombShots++;
-                System.out.println(Arrays.deepToString(area));
+                System.out.println(Arrays.deepToString(area).replace("], ", "]\n"));
             }
         }
         while (bombShots < 1);
